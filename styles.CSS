@@ -1,34 +1,60 @@
 .marquee-container {
-    height: 150px;
-    width: 350px;
-    background-color: blue;
-    overflow: hidden;
-    display: flex;
-}
-
-.marquee-content-wrapper {
-    background-color: red;
-    white-space: nowrap;
     display: flex;
     justify-content: space-between;
-    animation: scroll linear infinite;
-    animation-duration: 1s;
+    height: 100vh;
+    overflow: hidden;
+    background-color: blue;
 }
 
-.marquee-content-wrapper img {
-    height: 100%;
-    margin-right: 20px;
+.content-container {
+    margin-left: calc(400px + 1vw);
+    margin-right: calc(400px + 1vw);
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(0)
-    }
-    to {
-        transform: translate(-100%);
-    }
+.marquee-up {
+    width: 400px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
 }
 
-.marquee-container:hover .marquee-content-wrapper {
-    animation-play-state: paused;
+.marquee-down {
+    width: 400px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: green;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+}
+
+.track img {
+    display: block;
+    margin-bottom: 450px;
+}
+
+.marquee-down .track {
+    animation: scrolldown 10s linear infinite;
+}
+
+.marquee-up .track {
+    animation: scrollup 10s linear infinite;
+}
+
+@keyframes scrolldown {
+    from {transform: translateY(-50%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes scrollup {
+    from {transform: translateY(0);}
+    to {transform: translateY(-50%);}
 }
