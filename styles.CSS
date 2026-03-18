@@ -1,35 +1,83 @@
+body {
+    background-color: #111F35;
+}
+
 .marquee-container {
     display: flex;
     justify-content: space-between;
     height: 100vh;
     overflow: hidden;
-    background-color: blue;
+    background-color: #111F35;
 }
 
 .content-container {
+    color: aliceblue;
     margin-left: calc(400px + 1vw);
     margin-right: calc(400px + 1vw);
 }
 
+.marquee-border-up {
+    width: 350px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.marquee-border-down {
+    width: 350px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.marquee-border-up img {
+    transform: rotate(90deg);
+    max-width: 100vh;
+    max-height: 100vw;
+    width: auto;
+    height: auto;
+    object-fit: fill;
+}
+
+.marquee-border-down img {
+    transform: rotate(-90deg);
+    max-width: 100vh;
+    max-height: 100vw;
+    width: auto;
+    height: auto;
+    object-fit: fill;
+}
+
+
 .marquee-up {
-    width: 400px;
+    width: 350px;
     overflow: hidden;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: red;
 }
 
 .marquee-down {
-    width: 400px;
+    width: 350px;
     overflow: hidden;
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: green;
 }
+
+
 
 .track {
     display: flex;
@@ -41,12 +89,24 @@
     margin-bottom: 450px;
 }
 
+.track img:hover {
+    size-adjust: 110%;
+}
+
 .marquee-down .track {
-    animation: scrolldown 10s linear infinite;
+    animation: scrolldown 20s linear infinite;
+}
+
+.marquee-down .track:hover {
+    animation-play-state: paused;
 }
 
 .marquee-up .track {
-    animation: scrollup 10s linear infinite;
+    animation: scrollup 20s linear infinite;
+}
+
+.marquee-up .track:hover {
+    animation-play-state: paused;
 }
 
 @keyframes scrolldown {
