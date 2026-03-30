@@ -83,6 +83,29 @@ body {
     margin-right: calc(400px + 1vw);
 }
 
+.content-container img {
+    width: 250px;
+    height: auto;
+}
+
+
+.content-container-ex1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-top: 50px;
+    margin-left: calc(400px + 1vw);
+    margin-right: calc(400px + 1vw);
+}
+
+.content-container-ex1 img {
+    width: 450px;
+    height: auto;
+}
+
 .marquee-border-up {
     width: 350px;
     position: fixed;
@@ -122,6 +145,50 @@ body {
     height: auto;
     object-fit: fill;
 }
+.marquee-border-up-ex1 {
+    width: 350px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.marquee-border-down-ex1 {
+    width: 350px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.marquee-border-up-ex1 img {
+    transform: rotate(90deg);
+    filter: hue-rotate(-90deg);
+    max-width: 100vh;
+    max-height: 100vw;
+    width: auto;
+    height: auto;
+    object-fit: fill;
+}
+
+.marquee-border-down-ex1 img {
+    transform: rotate(-90deg);
+    filter: hue-rotate(-90deg);
+    max-width: 100vh;
+    max-height: 100vw;
+    width: auto;
+    height: auto;
+    object-fit: fill;
+}
+
+
+
 
 
 .marquee-up {
@@ -153,13 +220,14 @@ body {
     width: 250px;
     height: 250px;
     margin-bottom: 450px;
-    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(michael-sum-LEpfefQf4rU-unsplash.webp);
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(images.jpg);
     background-size: cover;
     background-position: center;
     transition: transform 1s ease;
 }
 
 .example1 a {
+    position: inherit;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -168,9 +236,9 @@ body {
 }
 
 .example1 h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 25px;
     color: aliceblue;
 }
 
