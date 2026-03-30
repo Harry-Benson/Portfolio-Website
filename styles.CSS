@@ -223,6 +223,7 @@ body {
     background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(images.jpg);
     background-size: cover;
     background-position: center;
+    border-radius: 50px;
     transition: transform 1s ease;
 }
 
@@ -249,6 +250,7 @@ body {
     margin-bottom: 450px;
     background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(QuestionMark.png);
     background-size: cover;
+    border-radius: 50px;
     background-position: center;
     transition: transform 1s ease;
 }
